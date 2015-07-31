@@ -1,0 +1,25 @@
+{
+  "name": "ECExtension",
+  "version": "0.1.0",
+  "summary": "A short description of ECExtension.",
+  "description": "                       An optional longer description of ECExtension\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/ECExtension",
+  "license": "MIT",
+  "authors": {
+    "Eleven Chen": "skyhacker@126.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/ECExtension.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "ECExtension": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

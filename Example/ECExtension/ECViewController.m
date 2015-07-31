@@ -7,8 +7,11 @@
 //
 
 #import "ECViewController.h"
+#import <ECExtension/ECExtension.h>
+
 
 @interface ECViewController ()
+@property (weak, nonatomic) IBOutlet UIView *colorView;
 
 @end
 
@@ -18,6 +21,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.colorView.backgroundColor = [UIColor colorWithString:@"#00ff00"];
 }
 
 - (void)didReceiveMemoryWarning

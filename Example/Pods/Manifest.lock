@@ -1,0 +1,14 @@
+PODS:
+  - ECExtension (0.1.0)
+
+DEPENDENCIES:
+  - ECExtension (from `../`)
+
+EXTERNAL SOURCES:
+  ECExtension:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ECExtension: 180f2fc024995bf222bd92fd1782dbd775dc2ea4
+
+COCOAPODS: 0.37.2

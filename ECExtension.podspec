@@ -10,18 +10,15 @@
 Pod::Spec.new do |s|
   s.name             = "ECExtension"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ECExtension."
+  s.summary          = "ECExtension扩展Cocoa一些类"
   s.description      = <<-DESC
-                       An optional longer description of ECExtension
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                        # ECExtension扩展Cocoa一些类
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ECExtension"
+  s.homepage         = "https://github.com/skyhacker2/ECExtension"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Eleven Chen" => "skyhacker@126.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/ECExtension.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/skyhacker2/ECExtension.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
