@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/ECExtension.svg?style=flat)](http://cocoapods.org/pods/ECExtension)
 [![Platform](https://img.shields.io/cocoapods/p/ECExtension.svg?style=flat)](http://cocoapods.org/pods/ECExtension)
 
+扩展Cocoa类的功能
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
