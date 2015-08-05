@@ -14,4 +14,17 @@
 
 + (id) loadFromNibWithName:(NSString *)name ower:(id)ower;
 
+- (void) centerYInSuperView;
+
+- (void) centerXInSuperView;
+
+- (void) centerInSuperView;
+
+- (void) constraintWidth: (CGFloat) width;
+
+- (void) constraintHeight: (CGFloat) height;
+
+- (void) constraintSize: (CGSize) size;
+
+
 @end

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +23,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="0.30196978029999999" blue="0.37736558850000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="301" id="lCe-Kt-MTK"/>
+                                    <constraint firstAttribute="height" constant="301" id="lCe-Kt-MTK">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="79"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -38,7 +41,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3V9-sf-mRi" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="57" id="U5g-Pz-HZx"/>
+                            <constraint firstItem="3V9-sf-mRi" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="57" id="U5g-Pz-HZx">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
                             <constraint firstItem="3V9-sf-mRi" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="-16" id="ZOo-jm-DZ8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3V9-sf-mRi" secondAttribute="trailing" constant="-16" id="z0y-Fb-8br"/>
                         </constraints>
