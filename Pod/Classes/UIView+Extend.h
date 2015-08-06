@@ -26,5 +26,21 @@
 
 - (void) constraintSize: (CGSize) size;
 
+- (void) layoutWidthMatchSuperView;
+
+- (void) layoutHeightMatchSuperView;
+
+- (void) layoutMatchSuperView;
+
+- (void) layoutMarginTopSuperView:(CGFloat) dis;
+
+- (void) layoutMarginBottomSuperView:(CGFloat) dis;
+
+- (void) layoutMarginLeftSuperView:(CGFloat) dis;
+
+- (void) layoutMarginRightSuperView:(CGFloat) dis;
+
+- (void) layoutMarginSuperView: (CGFloat ) dis;
+
 
 @end

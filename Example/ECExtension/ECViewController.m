@@ -12,6 +12,7 @@
 
 @interface ECViewController ()
 @property (weak, nonatomic) IBOutlet UIView *colorView;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
 
 @end
 
@@ -32,6 +33,17 @@
     [view constraintWidth:100];
     [view centerXInSuperView];
     [view centerYInSuperView];
+    
+    UIView* view2 = [[UIView alloc] init];
+    view2.backgroundColor = [UIColor blackColor];
+    [self.bottomView addSubview:view2];
+    view2.translatesAutoresizingMaskIntoConstraints = NO;
+    //[view2 layoutMatchSuperView];
+//    [view2 layoutMarginRightSuperView:10];
+//    [view2 layoutMarginLeftSuperView:10];
+//    [view2 layoutMarginTopSuperView:10];
+//    [view2 layoutMarginBottomSuperView:10];
+    [view2 layoutMarginSuperView:10];
 }
 
 - (void) viewDidAppear:(BOOL)animated

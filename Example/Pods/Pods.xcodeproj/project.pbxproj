@@ -22,6 +22,10 @@
 		83D82827CB6AEA2540B00B98 /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 814A851DE8D58688C6BB0892 /* UIView+Extend.m */; };
 		89D2A52391A8DDB294E14060 /* Pods-ECExtension_Tests-ECExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E9D6A98E6D78E625AD95A3E /* Pods-ECExtension_Tests-ECExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B1F23396DFF1847B3E05D83 /* ECExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 905773CC76C3FDC96F3625B6 /* ECExtension.bundle */; };
+		A5C1B38D1B7318AD00F2E5E7 /* CBUUID+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = A5C1B38B1B7318AD00F2E5E7 /* CBUUID+Extend.h */; };
+		A5C1B38E1B7318AD00F2E5E7 /* CBUUID+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1B38C1B7318AD00F2E5E7 /* CBUUID+Extend.m */; };
+		A5C1B38F1B7319DB00F2E5E7 /* CBUUID+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C1B38C1B7318AD00F2E5E7 /* CBUUID+Extend.m */; };
+		A5C1B3901B731A2A00F2E5E7 /* CBUUID+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = A5C1B38B1B7318AD00F2E5E7 /* CBUUID+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADCB8992DDEA68730499DCE3 /* Pods-ECExtension_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1643D2C3431D477F9266FD5B /* Pods-ECExtension_Example-dummy.m */; };
 		B0D2E4098F7FB42463CAABAE /* Pods-ECExtension_Tests-ECExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 724A475C2B3286B99258EDC9 /* Pods-ECExtension_Tests-ECExtension-dummy.m */; };
 		B190A9AF6EB965ADC1B5D81B /* ECExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C4045180A4B0C67E063092 /* ECExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -101,6 +105,8 @@
 		9B6527AB675C4EF8CC725F64 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A16689DB86D93A40ADBF4B6D /* UIColor+Extend.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
 		A3B768A70ABB56B114B90EA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5C1B38B1B7318AD00F2E5E7 /* CBUUID+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+Extend.h"; sourceTree = "<group>"; };
+		A5C1B38C1B7318AD00F2E5E7 /* CBUUID+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+Extend.m"; sourceTree = "<group>"; };
 		A7CCF99B820237904BB5A594 /* Pods-ECExtension_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ECExtension_Tests.modulemap"; sourceTree = "<group>"; };
 		B996A5113A9C79F43F81A7CD /* Pods-ECExtension_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ECExtension_Example-environment.h"; sourceTree = "<group>"; };
 		BA5FB2FEBA9E0637732F72A3 /* ECExtension.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECExtension.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +234,8 @@
 				296EF6D51A3B6EC4D86A3F9E /* UIColor+Extend.m */,
 				75B2E868E819EE696B528AA1 /* UIView+Extend.h */,
 				814A851DE8D58688C6BB0892 /* UIView+Extend.m */,
+				A5C1B38B1B7318AD00F2E5E7 /* CBUUID+Extend.h */,
+				A5C1B38C1B7318AD00F2E5E7 /* CBUUID+Extend.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -324,6 +332,7 @@
 				BE2218A6E69E5BCA8E88CB2D /* Pods-ECExtension_Example-ECExtension-umbrella.h in Headers */,
 				351D009D4177075CC578AC25 /* UIColor+Extend.h in Headers */,
 				653B5BB0C4D9F3CBAA4AEB4B /* UIView+Extend.h in Headers */,
+				A5C1B3901B731A2A00F2E5E7 /* CBUUID+Extend.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +359,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C1B38D1B7318AD00F2E5E7 /* CBUUID+Extend.h in Headers */,
 				EB7120815A3672EE0A26D1E0 /* Pods-ECExtension_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -533,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C1B38F1B7319DB00F2E5E7 /* CBUUID+Extend.m in Sources */,
 				41F6BACA058EA836B571529D /* Pods-ECExtension_Example-ECExtension-dummy.m in Sources */,
 				DA65B68BA5AE2F5504F747FE /* UIColor+Extend.m in Sources */,
 				83D82827CB6AEA2540B00B98 /* UIView+Extend.m in Sources */,
@@ -554,6 +565,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCB8992DDEA68730499DCE3 /* Pods-ECExtension_Example-dummy.m in Sources */,
+				A5C1B38E1B7318AD00F2E5E7 /* CBUUID+Extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -86,4 +86,120 @@
     [self constraintHeight:size.height];
 }
 
+#pragma mark - layouts
+
+- (void) layoutWidthMatchSuperView
+{
+    if (!self.superview) {
+        return;
+    }
+    
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                              attribute:NSLayoutAttributeLeading
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.superview
+                                                              attribute:NSLayoutAttributeLeft
+                                                             multiplier:1.0f
+                                                                constant:0]];
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeTrailing
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.superview
+                                                               attribute:NSLayoutAttributeRight
+                                                              multiplier:1.0f
+                                                                constant:0]];
+}
+
+- (void) layoutHeightMatchSuperView
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeTop
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.superview
+                                                               attribute:NSLayoutAttributeTop
+                                                              multiplier:1.0f
+                                                                constant:0]];
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeBottom
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.superview
+                                                               attribute:NSLayoutAttributeBottom
+                                                              multiplier:1.0f
+                                                                constant:0]];
+}
+
+- (void) layoutMatchSuperView
+{
+    [self layoutWidthMatchSuperView];
+    [self layoutHeightMatchSuperView];
+}
+
+- (void) layoutMarginTopSuperView: (CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeTop
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.superview
+                                                               attribute:NSLayoutAttributeTop
+                                                              multiplier:1.0
+                                                                constant:dis]];
+}
+
+- (void) layoutMarginBottomSuperView: (CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeBottom
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.superview
+                                                               attribute:NSLayoutAttributeBottom
+                                                              multiplier:1.0
+                                                                constant:-dis]];
+}
+
+- (void) layoutMarginLeftSuperView: (CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeLeading
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.superview
+                                                               attribute:NSLayoutAttributeLeft
+                                                              multiplier:1.0
+                                                                constant:dis]];
+}
+
+- (void) layoutMarginRightSuperView: (CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeTrailing
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:self.superview
+                                                               attribute:NSLayoutAttributeRight
+                                                              multiplier:1.0
+                                                                constant:-dis]];
+}
+
+- (void) layoutMarginSuperView: (CGFloat ) dis
+{
+    [self layoutMarginTopSuperView:dis];
+    [self layoutMarginBottomSuperView:dis];
+    [self layoutMarginLeftSuperView:dis];
+    [self layoutMarginRightSuperView:dis];
+
+}
+
 @end

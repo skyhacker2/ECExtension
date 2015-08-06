@@ -38,37 +38,66 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzs-TO-jO2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="RYs-xl-0wr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RYs-xl-0wr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="RYs-xl-0wr"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jzs-TO-jO2" secondAttribute="trailing" constant="51" id="F92-zG-7TF"/>
                             <constraint firstItem="3V9-sf-mRi" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="57" id="U5g-Pz-HZx">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
                             </constraint>
                             <constraint firstItem="3V9-sf-mRi" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="-16" id="ZOo-jm-DZ8"/>
+                            <constraint firstItem="Jzs-TO-jO2" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="52" id="Ztr-TG-eRA"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="Jzs-TO-jO2" secondAttribute="bottom" constant="8" id="iu2-pH-buY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3V9-sf-mRi" secondAttribute="trailing" constant="-16" id="z0y-Fb-8br"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3V9-sf-mRi"/>
+                                <exclude reference="Jzs-TO-jO2"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="U5g-Pz-HZx"/>
                                 <exclude reference="ZOo-jm-DZ8"/>
                                 <exclude reference="z0y-Fb-8br"/>
+                                <exclude reference="F92-zG-7TF"/>
+                                <exclude reference="Ztr-TG-eRA"/>
+                                <exclude reference="iu2-pH-buY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3V9-sf-mRi"/>
+                                <include reference="Jzs-TO-jO2"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="U5g-Pz-HZx"/>
                                 <include reference="ZOo-jm-DZ8"/>
                                 <include reference="z0y-Fb-8br"/>
+                                <include reference="F92-zG-7TF"/>
+                                <include reference="Ztr-TG-eRA"/>
+                                <include reference="iu2-pH-buY"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bottomView" destination="Jzs-TO-jO2" id="WoB-qC-0OA"/>
                         <outlet property="colorView" destination="3V9-sf-mRi" id="bTW-dT-8Qh"/>
                     </connections>
                 </viewController>

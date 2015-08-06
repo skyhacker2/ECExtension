@@ -9,7 +9,8 @@
 #ifndef Pods_ECExtension_h
 #define Pods_ECExtension_h
 
-#include "UIView+Extend.h"
-#include "UIColor+Extend.h"
+#import "UIView+Extend.h"
+#import "UIColor+Extend.h"
+#import "CBUUID+Extend.h"
 
 #endif
