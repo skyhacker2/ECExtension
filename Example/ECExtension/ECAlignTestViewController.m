@@ -76,7 +76,15 @@
     [imageView2 topTo:imageView1 distance:20];
     [imageView2 centerXInSuperView];
     NSLog(@"%f %f", imageView2.bounds.size.width, imageView2.bounds.size.height);
-
+    
+    UIImage* image3 = [[UIImage imageNamed:@"Light.png"] changeColor:[UIColor greenColor]];
+    UIImageView *imageView3 = [[UIImageView alloc] initWithImage:image3];
+    imageView3.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:imageView3];
+    [imageView3 topTo:imageView2 distance:20];
+    [imageView3 centerXInSuperView];
+    NSLog(@"%f %f", imageView2.bounds.size.width, imageView2.bounds.size.height);
+    
 }
 
 

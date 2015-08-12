@@ -21,4 +21,19 @@
     return toImage;
 }
 
+- (UIImage*) changeColor: (UIColor*) color
+{
+    CGSize size = self.size;
+    UIGraphicsBeginImageContext(size);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextClipToMask(ctx, CGRectMake(0, 0, size.width, size.height), self.CGImage);
+    CGContextSetFillColorWithColor(ctx, color.CGColor);
+    CGContextFillRect(ctx, CGRectMake(0, 0, size.width, size.height));
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIImage* flippedImage = [UIImage imageWithCGImage:img.CGImage scale:1 orientation:UIImageOrientationDownMirrored];
+    return flippedImage;
+}
+
 @end

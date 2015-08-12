@@ -1,6 +1,0 @@
-framework module ECExtension {
-  umbrella header "Pods-ECExtension_Example-ECExtension-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -12,4 +12,6 @@
 
 - (UIImage*) scaleImage: (CGFloat) scale;
 
+- (UIImage*) changeColor: (UIColor*) color;
+
 @end
