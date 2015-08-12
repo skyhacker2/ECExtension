@@ -61,6 +61,22 @@
     [view5 bottomTo:view1 distance:20];
     [view5 alignLeftTo:view1];
     
+    UIImage* image = [UIImage imageNamed:@"Circle.png"];
+    UIImageView *imageView1 = [[UIImageView alloc] initWithImage:image];
+    imageView1.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:imageView1];
+    [imageView1 topTo:view2 distance:20];
+    [imageView1 centerXInSuperView];
+    NSLog(@"%f %f", imageView1.bounds.size.width, imageView1.bounds.size.height);
+    
+    UIImage* image2 = [image scaleImage:0.5];
+    UIImageView *imageView2 = [[UIImageView alloc] initWithImage:image2];
+    imageView2.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:imageView2];
+    [imageView2 topTo:imageView1 distance:20];
+    [imageView2 centerXInSuperView];
+    NSLog(@"%f %f", imageView2.bounds.size.width, imageView2.bounds.size.height);
+
 }
 
 

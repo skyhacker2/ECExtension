@@ -17,6 +17,8 @@
 		60FDEAFDEF036180C4689C609BFE0027 /* CBUUID+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAACFED23872E372159B8A8CCDBB87E /* CBUUID+Extend.m */; };
 		676E22329F6D53CE4F039D6C71687378 /* Pods-ECExtension_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3A66A9EBC3C029FD5C449F9949CE2 /* Pods-ECExtension_Tests-dummy.m */; };
 		76C07AFD262D10826475EF65524ADCEC /* ECExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A07E99E5B63C8E8FE61B10A4AD929E2 /* ECExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5341E561B7B70C1004C867E /* UIImage+Extend.h in Headers */ = {isa = PBXBuildFile; fileRef = A5341E541B7B70C1004C867E /* UIImage+Extend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5341E571B7B70C1004C867E /* UIImage+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = A5341E551B7B70C1004C867E /* UIImage+Extend.m */; };
 		AB785E490B901248ED1178378C5C95FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6759D51611CDBE702AF03CC1D59EF1 /* Foundation.framework */; };
 		D2F214E499B0EAB7A363AE0DB0A5AA3F /* Pods-ECExtension_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C4719546C5CE9E01FB86818FF74F412 /* Pods-ECExtension_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D443AFF6AEC033D18179ACFC0AC1772D /* ECExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70F27B6D82EB03D398F2A740A29D6B7F /* ECExtension.bundle */; };
@@ -71,6 +73,8 @@
 		894462AB70A56D2E1F448B35C07DF10E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CFC7AE40F6B4C9255DA6E02B9D781A0 /* ECExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ECExtension-prefix.pch"; sourceTree = "<group>"; };
 		9E6A4A53A6F1800675FB1FCC79AE388E /* ECExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5341E541B7B70C1004C867E /* UIImage+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extend.h"; sourceTree = "<group>"; };
+		A5341E551B7B70C1004C867E /* UIImage+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extend.m"; sourceTree = "<group>"; };
 		A6E3DE828E1160E9EAD21222D8B565B1 /* Pods-ECExtension_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ECExtension_Example-resources.sh"; sourceTree = "<group>"; };
 		AA843A06A588C9E680285D218D7439D5 /* Pods-ECExtension_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ECExtension_Example-frameworks.sh"; sourceTree = "<group>"; };
 		AF0790AA66B2DBFD461ECC5D702EF482 /* Pods-ECExtension_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ECExtension_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				D476D2838794E3300770A8CE3D8D818C /* UIColor+Extend.m */,
 				3EA8ABDE0F2E010DFAAD30CD9CD1FFFA /* UIView+Extend.h */,
 				DFAF0AC154332CEAA513B3FAB8F96C51 /* UIView+Extend.m */,
+				A5341E541B7B70C1004C867E /* UIImage+Extend.h */,
+				A5341E551B7B70C1004C867E /* UIImage+Extend.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				16755D11A6A8E01A0F6B033EDB37132F /* ECExtension-umbrella.h in Headers */,
 				76C07AFD262D10826475EF65524ADCEC /* ECExtension.h in Headers */,
 				E6FABFDD91CED73D802169E140586B1B /* UIColor+Extend.h in Headers */,
+				A5341E561B7B70C1004C867E /* UIImage+Extend.h in Headers */,
 				2CCFC98111C1397A19A91F8E1E1FAFA7 /* UIView+Extend.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +433,7 @@
 			files = (
 				60FDEAFDEF036180C4689C609BFE0027 /* CBUUID+Extend.m in Sources */,
 				3A02C6EC4A8D03DD6AA4E7B4664769CE /* ECExtension-dummy.m in Sources */,
+				A5341E571B7B70C1004C867E /* UIImage+Extend.m in Sources */,
 				3841CB4CDDE779BAAA4C3A00116F0C5C /* UIColor+Extend.m in Sources */,
 				2D8412912B5299165994781CCF9178A5 /* UIView+Extend.m in Sources */,
 			);

@@ -12,5 +12,6 @@
 #import "UIView+Extend.h"
 #import "UIColor+Extend.h"
 #import "CBUUID+Extend.h"
+#import "UIImage+Extend.h"
 
 #endif
