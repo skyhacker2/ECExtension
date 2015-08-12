@@ -22,6 +22,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		9E2EADE4B9A9855C1B891AB0 /* Pods_ECExtension_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9F180ACF504F02955F6932 /* Pods_ECExtension_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A5341E531B7B6664004C867E /* ECAlignTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5341E521B7B6664004C867E /* ECAlignTestViewController.m */; };
 		BB85AD4493B74AE9975590E4 /* Pods_ECExtension_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD380497E142A4A088BC575E /* Pods_ECExtension_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6CC12B2B4A8006040EAA817F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A5341E511B7B6664004C867E /* ECAlignTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAlignTestViewController.h; sourceTree = "<group>"; };
+		A5341E521B7B6664004C867E /* ECAlignTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAlignTestViewController.m; sourceTree = "<group>"; };
 		AC87CBFCB087F37FCCA201D6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D11B07F62233241FC449F9C9 /* Pods-ECExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECExtension_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECExtension_Example/Pods-ECExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E14A3055FAFF6D992058BE9E /* ECExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ECExtension.podspec; path = ../ECExtension.podspec; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ECViewController.h */,
 				6003F5A6195388D20070C39A /* ECViewController.m */,
+				A5341E511B7B6664004C867E /* ECAlignTestViewController.h */,
+				A5341E521B7B6664004C867E /* ECAlignTestViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -390,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5341E531B7B6664004C867E /* ECAlignTestViewController.m in Sources */,
 				6003F59E195388D20070C39A /* ECAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ECViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

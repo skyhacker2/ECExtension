@@ -1,5 +1,5 @@
 PODS:
-  - ECExtension (0.1.0)
+  - ECExtension (0.1.2)
 
 DEPENDENCIES:
   - ECExtension (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ECExtension: 180f2fc024995bf222bd92fd1782dbd775dc2ea4
+  ECExtension: ea001af7edefc34219da967a6617423e54865a69
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

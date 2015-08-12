@@ -32,6 +32,7 @@
 
 - (void) layoutMatchSuperView;
 
+#pragma mark - Margin
 - (void) layoutMarginTopSuperView:(CGFloat) dis;
 
 - (void) layoutMarginBottomSuperView:(CGFloat) dis;
@@ -42,5 +43,24 @@
 
 - (void) layoutMarginSuperView: (CGFloat ) dis;
 
+#pragma mark - Align
+
+- (void) alignLeftTo: (UIView*) view;
+
+- (void) alignRightTo: (UIView*) view;
+
+- (void) alignTopTo: (UIView*) view;
+
+- (void) alignBottomTo: (UIView*) view;
+
+#pragma mark - Position relative to other view
+
+- (void) leftTo: (UIView*) view distance:(CGFloat) dis;
+
+- (void) rightTo: (UIView*) view distance:(CGFloat) dis;
+
+- (void) topTo: (UIView*) view distance:(CGFloat) dis;
+
+- (void) bottomTo: (UIView*) view distance:(CGFloat) dis;
 
 @end

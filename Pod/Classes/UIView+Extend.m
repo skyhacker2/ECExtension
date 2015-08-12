@@ -202,4 +202,108 @@
 
 }
 
+#pragma mark - Align
+
+- (void) alignLeftTo: (UIView*) view
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                              attribute:NSLayoutAttributeLeft
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:view
+                                                              attribute:NSLayoutAttributeLeft
+                                                             multiplier:1.0f
+                                                                constant:0]];
+}
+
+- (void) alignRightTo: (UIView*) view
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeRight
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:view
+                                                               attribute:NSLayoutAttributeRight
+                                                              multiplier:1.0f
+                                                                constant:0]];
+}
+
+- (void) alignTopTo: (UIView*) view
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeTop
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:view
+                                                               attribute:NSLayoutAttributeTop
+                                                              multiplier:1.0f
+                                                                constant:0]];
+}
+
+- (void) alignBottomTo: (UIView*) view
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeBottom
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:view
+                                                               attribute:NSLayoutAttributeBottom
+                                                              multiplier:1.0f
+                                                                constant:0]];
+}
+
+#pragma mark - Position relative to other view
+
+- (void) leftTo: (UIView*) view distance:(CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[self]-dis-[view]"
+                                                                          options:0
+                                                                           metrics:@{@"dis": @(dis)}
+                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+}
+
+- (void) rightTo: (UIView*) view distance:(CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[view]-dis-[self]"
+                                                                           options:0
+                                                                           metrics:@{@"dis": @(dis)}
+                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+}
+
+- (void) topTo: (UIView*) view distance:(CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[self]-dis-[view]"
+                                                                           options:0
+                                                                           metrics:@{@"dis": @(dis)}
+                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+}
+
+- (void) bottomTo: (UIView*) view distance:(CGFloat) dis
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[view]-dis-[self]"
+                                                                           options:0
+                                                                           metrics:@{@"dis": @(dis)}
+                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+}
+
 @end
