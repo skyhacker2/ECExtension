@@ -14,11 +14,18 @@
 
 + (id) loadFromNibWithName:(NSString *)name ower:(id)ower;
 
+#pragma mark - Position
 - (void) centerYInSuperView;
 
 - (void) centerXInSuperView;
 
 - (void) centerInSuperView;
+
+- (void) centerXTo: (UIView*) view;
+
+- (void) centerYTo: (UIView*) view;
+
+- (void) centerTo: (UIView*) view;
 
 - (void) constraintWidth: (CGFloat) width;
 
@@ -26,13 +33,13 @@
 
 - (void) constraintSize: (CGSize) size;
 
+#pragma mark - Margin
 - (void) layoutWidthMatchSuperView;
 
 - (void) layoutHeightMatchSuperView;
 
 - (void) layoutMatchSuperView;
 
-#pragma mark - Margin
 - (void) layoutMarginTopSuperView:(CGFloat) dis;
 
 - (void) layoutMarginBottomSuperView:(CGFloat) dis;

@@ -85,6 +85,14 @@
     [imageView3 centerXInSuperView];
     NSLog(@"%f %f", imageView2.bounds.size.width, imageView2.bounds.size.height);
     
+    UIView* view6 = [[UIView alloc] init];
+    view6.backgroundColor = [UIColor purpleColor];
+    [self.view insertSubview:view6 belowSubview:view5];
+    view6.translatesAutoresizingMaskIntoConstraints = NO;
+    [view6 constraintSize:CGSizeMake(100, 100)];
+    [view6 centerXTo:view5];
+    [view6 centerYTo:view5];
+    
 }
 
 

@@ -59,6 +59,39 @@
     [self centerXInSuperView];
     [self centerYInSuperView];
 }
+- (void) centerXTo: (UIView*) view
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                              attribute:NSLayoutAttributeCenterX
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:view
+                                                              attribute:NSLayoutAttributeCenterX
+                                                             multiplier:1.0
+                                                                constant:0]];
+}
+
+- (void) centerYTo: (UIView*) view
+{
+    if (!self.superview) {
+        return;
+    }
+    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+                                                               attribute:NSLayoutAttributeCenterY
+                                                               relatedBy:NSLayoutRelationEqual
+                                                                  toItem:view
+                                                               attribute:NSLayoutAttributeCenterY
+                                                              multiplier:1.0
+                                                                constant:0]];
+}
+
+- (void) centerTo: (UIView*) view
+{
+    [self centerXTo:view];
+    [self centerYTo:view];
+}
 
 - (void) constraintWidth: (CGFloat) width
 {
