@@ -13,5 +13,6 @@
 #import "UIColor+Extend.h"
 #import "CBUUID+Extend.h"
 #import "UIImage+Extend.h"
+#import "NSManagedObjectContext-EasyFetch.h"
 
 #endif
