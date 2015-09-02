@@ -40,34 +40,34 @@
 
 - (void) layoutMatchSuperView;
 
-- (void) layoutMarginTopSuperView:(CGFloat) dis;
+- (NSLayoutConstraint*) layoutMarginTopSuperView:(CGFloat) dis;
 
-- (void) layoutMarginBottomSuperView:(CGFloat) dis;
+- (NSLayoutConstraint*) layoutMarginBottomSuperView:(CGFloat) dis;
 
-- (void) layoutMarginLeftSuperView:(CGFloat) dis;
+- (NSLayoutConstraint*) layoutMarginLeftSuperView:(CGFloat) dis;
 
-- (void) layoutMarginRightSuperView:(CGFloat) dis;
+- (NSLayoutConstraint*) layoutMarginRightSuperView:(CGFloat) dis;
 
-- (void) layoutMarginSuperView: (CGFloat ) dis;
+- (NSArray*) layoutMarginSuperView: (CGFloat ) dis;
 
 #pragma mark - Align
 
-- (void) alignLeftTo: (UIView*) view;
+- (NSLayoutConstraint*) alignLeftTo: (UIView*) view;
 
-- (void) alignRightTo: (UIView*) view;
+- (NSLayoutConstraint*) alignRightTo: (UIView*) view;
 
-- (void) alignTopTo: (UIView*) view;
+- (NSLayoutConstraint*) alignTopTo: (UIView*) view;
 
-- (void) alignBottomTo: (UIView*) view;
+- (NSLayoutConstraint*) alignBottomTo: (UIView*) view;
 
 #pragma mark - Position relative to other view
 
-- (void) leftTo: (UIView*) view distance:(CGFloat) dis;
+- (NSArray*) leftTo: (UIView*) view distance:(CGFloat) dis;
 
-- (void) rightTo: (UIView*) view distance:(CGFloat) dis;
+- (NSArray*) rightTo: (UIView*) view distance:(CGFloat) dis;
 
-- (void) topTo: (UIView*) view distance:(CGFloat) dis;
+- (NSArray*) topTo: (UIView*) view distance:(CGFloat) dis;
 
-- (void) bottomTo: (UIView*) view distance:(CGFloat) dis;
+- (NSArray*) bottomTo: (UIView*) view distance:(CGFloat) dis;
 
 @end

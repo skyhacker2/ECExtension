@@ -175,7 +175,7 @@
     if (!self.superview) {
         return;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
+    return [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
                                                                attribute:NSLayoutAttributeTop
                                                                relatedBy:NSLayoutRelationEqual
                                                                   toItem:self.superview
@@ -184,159 +184,182 @@
                                                                 constant:dis]];
 }
 
-- (void) layoutMarginBottomSuperView: (CGFloat) dis
+- (NSLayoutConstraint*) layoutMarginBottomSuperView: (CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeBottom
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self.superview
-                                                               attribute:NSLayoutAttributeBottom
-                                                              multiplier:1.0
-                                                                constant:-dis]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.superview
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                 multiplier:1.0
+                                                                   constant:-dis];
+    [self.superview addConstraint: constraint];
+    return constraint;
 }
 
-- (void) layoutMarginLeftSuperView: (CGFloat) dis
+- (NSLayoutConstraint*) layoutMarginLeftSuperView: (CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeLeading
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self.superview
-                                                               attribute:NSLayoutAttributeLeft
-                                                              multiplier:1.0
-                                                                constant:dis]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeLeading
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.superview
+                                                                  attribute:NSLayoutAttributeLeft
+                                                                 multiplier:1.0
+                                                                   constant:dis];
+    [self.superview addConstraint: constraint];
+    return constraint;
 }
 
-- (void) layoutMarginRightSuperView: (CGFloat) dis
+- (NSLayoutConstraint*) layoutMarginRightSuperView: (CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeTrailing
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self.superview
-                                                               attribute:NSLayoutAttributeRight
-                                                              multiplier:1.0
-                                                                constant:-dis]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeTrailing
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.superview
+                                                                  attribute:NSLayoutAttributeRight
+                                                                 multiplier:1.0
+                                                                   constant:-dis];
+    [self.superview addConstraint:nil];
+    return constraint;
 }
 
-- (void) layoutMarginSuperView: (CGFloat ) dis
+- (NSArray*) layoutMarginSuperView: (CGFloat ) dis
 {
-    [self layoutMarginTopSuperView:dis];
-    [self layoutMarginBottomSuperView:dis];
-    [self layoutMarginLeftSuperView:dis];
-    [self layoutMarginRightSuperView:dis];
-
+    NSMutableArray* array = [[NSMutableArray alloc] init];
+    [array addObject:[self layoutMarginTopSuperView:dis]];
+    [array addObject:[self layoutMarginBottomSuperView:dis]];
+    [array addObject:[self layoutMarginLeftSuperView:dis]];
+    [array addObject:[self layoutMarginRightSuperView:dis]];
+    return [array copy];
 }
 
 #pragma mark - Align
 
-- (void) alignLeftTo: (UIView*) view
+- (NSLayoutConstraint*) alignLeftTo: (UIView*) view
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                              attribute:NSLayoutAttributeLeft
-                                                              relatedBy:NSLayoutRelationEqual
-                                                                 toItem:view
-                                                              attribute:NSLayoutAttributeLeft
-                                                             multiplier:1.0f
-                                                                constant:0]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeLeft
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:view
+                                                                  attribute:NSLayoutAttributeLeft
+                                                                 multiplier:1.0f
+                                                                   constant:0];
+    [self.superview addConstraint: constraint];
+    return constraint;
 }
 
-- (void) alignRightTo: (UIView*) view
+- (NSLayoutConstraint*) alignRightTo: (UIView*) view
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeRight
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:view
-                                                               attribute:NSLayoutAttributeRight
-                                                              multiplier:1.0f
-                                                                constant:0]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeRight
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:view
+                                                                  attribute:NSLayoutAttributeRight
+                                                                 multiplier:1.0f
+                                                                   constant:0];
+    [self.superview addConstraint: constraint];
+    return constraint;
 }
 
-- (void) alignTopTo: (UIView*) view
+- (NSLayoutConstraint*) alignTopTo: (UIView*) view
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeTop
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:view
-                                                               attribute:NSLayoutAttributeTop
-                                                              multiplier:1.0f
-                                                                constant:0]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeTop
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:view
+                                                                  attribute:NSLayoutAttributeTop
+                                                                 multiplier:1.0f
+                                                                   constant:0];
+    [self.superview addConstraint: constraint];
+    return constraint;
 }
 
-- (void) alignBottomTo: (UIView*) view
+- (NSLayoutConstraint*) alignBottomTo: (UIView*) view
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeBottom
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:view
-                                                               attribute:NSLayoutAttributeBottom
-                                                              multiplier:1.0f
-                                                                constant:0]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:view
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                 multiplier:1.0f
+                                                                   constant:0];
+    [self.superview addConstraint: constraint];
+    return constraint;
 }
 
 #pragma mark - Position relative to other view
 
-- (void) leftTo: (UIView*) view distance:(CGFloat) dis
+- (NSArray*) leftTo: (UIView*) view distance:(CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[self]-dis-[view]"
-                                                                          options:0
-                                                                           metrics:@{@"dis": @(dis)}
-                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+    NSArray* constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[self]-dis-[view]"
+                                                                             options:0
+                                                                             metrics:@{@"dis": @(dis)}
+                                                                               views:NSDictionaryOfVariableBindings(self, view)];
+    [self.superview addConstraints: constraints];
+    return constraints;
 }
 
-- (void) rightTo: (UIView*) view distance:(CGFloat) dis
+- (NSArray*) rightTo: (UIView*) view distance:(CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[view]-dis-[self]"
-                                                                           options:0
-                                                                           metrics:@{@"dis": @(dis)}
-                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+    NSArray* constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:[view]-dis-[self]"
+                                                                   options:0
+                                                                   metrics:@{@"dis": @(dis)}
+                                                                     views:NSDictionaryOfVariableBindings(self, view)];
+    [self.superview addConstraints: constraints];
+    return constraints;
 }
 
-- (void) topTo: (UIView*) view distance:(CGFloat) dis
+- (NSArray*) topTo: (UIView*) view distance:(CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[self]-dis-[view]"
-                                                                           options:0
-                                                                           metrics:@{@"dis": @(dis)}
-                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+    NSArray* constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[self]-dis-[view]"
+                                                                   options:0
+                                                                   metrics:@{@"dis": @(dis)}
+                                                                     views:NSDictionaryOfVariableBindings(self, view)];
+    [self.superview addConstraints: constraints];
+    return constraints;
 }
 
-- (void) bottomTo: (UIView*) view distance:(CGFloat) dis
+- (NSArray*) bottomTo: (UIView*) view distance:(CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    [self.superview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[view]-dis-[self]"
-                                                                           options:0
-                                                                           metrics:@{@"dis": @(dis)}
-                                                                             views:NSDictionaryOfVariableBindings(self, view)]];
+    NSArray* constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[view]-dis-[self]"
+                                                                   options:0
+                                                                   metrics:@{@"dis": @(dis)}
+                                                                     views:NSDictionaryOfVariableBindings(self, view)];
+    [self.superview addConstraints: constraints];
+    return constraints;
 }
 
 @end
