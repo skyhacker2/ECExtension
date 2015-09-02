@@ -230,7 +230,7 @@
                                                                   attribute:NSLayoutAttributeRight
                                                                  multiplier:1.0
                                                                    constant:-dis];
-    [self.superview addConstraint:nil];
+    [self.superview addConstraint:constraint];
     return constraint;
 }
 
