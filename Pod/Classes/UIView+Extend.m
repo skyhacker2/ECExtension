@@ -170,18 +170,20 @@
     [self layoutHeightMatchSuperView];
 }
 
-- (void) layoutMarginTopSuperView: (CGFloat) dis
+- (NSLayoutConstraint*) layoutMarginTopSuperView: (CGFloat) dis
 {
     if (!self.superview) {
-        return;
+        return nil;
     }
-    return [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeTop
-                                                               relatedBy:NSLayoutRelationEqual
-                                                                  toItem:self.superview
-                                                               attribute:NSLayoutAttributeTop
-                                                              multiplier:1.0
-                                                                constant:dis]];
+    NSLayoutConstraint* constraint = [NSLayoutConstraint constraintWithItem:self
+                                                                  attribute:NSLayoutAttributeTop
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self.superview
+                                                                  attribute:NSLayoutAttributeTop
+                                                                 multiplier:1.0
+                                                                   constant:dis];
+    [self.superview addConstraint: constraint];
+    return constraint;
 }
 
 - (NSLayoutConstraint*) layoutMarginBottomSuperView: (CGFloat) dis
