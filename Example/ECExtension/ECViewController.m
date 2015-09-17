@@ -43,7 +43,8 @@
 //    [view2 layoutMarginLeftSuperView:10];
 //    [view2 layoutMarginTopSuperView:10];
 //    [view2 layoutMarginBottomSuperView:10];
-    [view2 layoutMarginSuperView:10];
+    //[view2 layoutMarginSuperView:10];
+    [view2 layoutMatchSuperView];
 }
 
 - (void) viewDidAppear:(BOOL)animated

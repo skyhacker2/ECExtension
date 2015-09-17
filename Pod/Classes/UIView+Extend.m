@@ -128,14 +128,14 @@
     }
     
     [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                              attribute:NSLayoutAttributeLeading
+                                                              attribute:NSLayoutAttributeLeft
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self.superview
                                                               attribute:NSLayoutAttributeLeft
                                                              multiplier:1.0f
                                                                 constant:0]];
     [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                               attribute:NSLayoutAttributeTrailing
+                                                               attribute:NSLayoutAttributeRight
                                                                relatedBy:NSLayoutRelationEqual
                                                                   toItem:self.superview
                                                                attribute:NSLayoutAttributeRight

@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ECExtension"
-  s.version          = "0.2.1"
+  s.version          = "0.2.2"
   s.summary          = "ECExtension扩展Cocoa一些类"
   s.description      = <<-DESC
                         # ECExtension扩展Cocoa一些类
