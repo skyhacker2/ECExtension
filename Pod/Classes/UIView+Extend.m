@@ -211,7 +211,7 @@
                                                                   attribute:NSLayoutAttributeLeading
                                                                   relatedBy:NSLayoutRelationEqual
                                                                      toItem:self.superview
-                                                                  attribute:NSLayoutAttributeLeft
+                                                                  attribute:NSLayoutAttributeLeading
                                                                  multiplier:1.0
                                                                    constant:dis];
     [self.superview addConstraint: constraint];
@@ -227,7 +227,7 @@
                                                                   attribute:NSLayoutAttributeTrailing
                                                                   relatedBy:NSLayoutRelationEqual
                                                                      toItem:self.superview
-                                                                  attribute:NSLayoutAttributeRight
+                                                                  attribute:NSLayoutAttributeTrailing
                                                                  multiplier:1.0
                                                                    constant:-dis];
     [self.superview addConstraint:constraint];
